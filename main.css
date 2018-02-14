@@ -1,0 +1,62 @@
+body{
+    background: linear-gradient(to right, #f857a6, #ff5858);
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-weight: 300 !important;
+}
+#app {
+    margin: 5% auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    padding: 10px;
+    width: 325px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+input {
+    padding: 8px 5px;
+    margin: 10px 0;
+    border-radius: 5px; 
+    border: 1px solid #bbb;
+}
+form h1, form p{
+    padding: 0;
+    margin: 0;
+}
+form p {
+    margin-bottom: 5px;
+}
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff1493;
+}
+li {
+    padding: 8px 5px;
+    padding-left: 10px;
+}
+i.close {
+    float: right;
+    cursor: pointer;
+    font-size: 1.3em;    
+    align-content: center;
+}
+li:hover .close{
+    color: #ff0000;
+}
+li:hover {
+    background-color: #eee;
+    border-radius: 5px;
+}
