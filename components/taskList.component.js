@@ -1,15 +1,17 @@
 (function() {
     var taskList = {
         bindings: {  
-            item: "&"                    
+            addItem: "&",
+            todoList: "<"                
         },
         templateUrl: "partials/list.partial.html",
         controller: function() {
-            var $ctrl = this;
-            $ctrl.removeItem = function (index){
-                $ctrl.todoList.splice(index, 1);
-                //document.getElementById("addItems").value = "";
-            }     
+            var vm = this;
+            vm.todoList = [];
+            vm.removeItem = function(item) {
+                vm.todoList.splice(item, 1);
+                console.log(item);
+              };
         }
     };
     angular.module("app")

@@ -1,16 +1,17 @@
-(function() {
+(function () {
     var taskForm = {
-        bindings: { 
-            item: "&"       
+        bindings: {
+            
         },
         templateUrl: "partials/form.partial.html",
         //controller: "FormController"
-        controller: function() {
-            var $ctrl = this;
-            $ctrl.addItem = function (todoAdd){
-                $ctrl.todoList.push($ctrl.todoAdd);
-                //document.getElementById("addItems").value = "";
-            }     
+        controller: function () {
+            var vm = this;
+            vm.todoList = [];
+            vm.addItem = function (todoAdd) {
+                vm.todoList.push(todoAdd);
+                document.getElementById("addItems").value = "";
+            }
         }
     };
     angular.module("app")
