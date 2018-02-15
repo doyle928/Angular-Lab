@@ -53,10 +53,13 @@ i.close {
     font-size: 1.3em;    
     align-content: center;
 }
-li:hover .close{
+/* li:hover .close{
     color: #ff0000;
 }
 li:hover {
     background-color: #eee;
     border-radius: 5px;
+} */
+#filterInput {
+    width: 280px;
 }

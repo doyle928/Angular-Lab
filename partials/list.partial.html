@@ -1,5 +1,6 @@
-<input type="text" placeholder="Filter your to-dos">
-<ol>
-<li ng-repeat="item in vm.todoList">{{item}}<i class="material-icons close" ng-click="$ctrl.removeItem($index)">close</i>
-</li>
+<input type="text" placeholder="Filter your to-dos" ng-model="todoFilter" id="filterInput">
+<ol>   
+    <hover-state>
+    <li ng-repeat="item in $ctrl.list| filter: todoFilter track by $index" hover-list>{{item}}<i class="material-icons close" ng-click="$ctrl.removeItem($index)" hover-icon>close</i></li>
+</hover-state>
 </ol>

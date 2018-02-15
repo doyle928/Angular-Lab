@@ -1,10 +1,17 @@
-(function() {
+(function () {
     var taskList = {
-        bindings: { 
-            todoList: "<"
+        bindings: {
+            list: "<"
         },
         templateUrl: "partials/list.partial.html",
-        controller: "FormController"
+        controller: function(){
+            var vm = this;
+            vm.removeItem = function (index){
+                vm.list.splice(index, 1);
+            }
+        }
+
+
     };
     angular.module("app")
         .component("taskList", taskList);
