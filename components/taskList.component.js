@@ -1,18 +1,20 @@
 (function () {
     var taskList = {
-        bindings: {
-            list: "<"
-        },
+        // bindings: {
+        //     list: "<"
+        // },
         templateUrl: "partials/list.partial.html",
-        controller: function(){
+        controller: function (TaskService) {
             var vm = this;
-            vm.removeItem = function (index){
-                vm.list.splice(index, 1);
+            vm.tasksToDisplay = TaskService.getTask();
+            vm.ClickX = function(bar) {
+                vm.tasksToDisplay.splice(bar, 1);
             }
         }
-
-
     };
+
+
     angular.module("app")
         .component("taskList", taskList);
+
 })();

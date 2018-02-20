@@ -12,19 +12,20 @@
 </head>
 
 <body>
-    <div id="app">
-        <task-form></task-form>
-    </div>
-
+    <ng-view></ng-view>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
     <script src="app.js"></script>
+    <script src="config.js"></script>
+    <script src="services/TaskService.js"></script>
     <script src="controller/controller.js"></script>
     <script src="components/taskForm.component.js"></script>
     <script src="components/taskList.component.js"></script>
-    <script src="directives/hoverList.directive.js"></script>
-    <script src="directives/hoverIcon.directive.js"></script>
-
+    <script src="components/start.component.js"></script>
+    <script src="directives/hoverState.directive.js"></script>
+    <script src="directives/hoverLinks.directive.js"></script>
+    <script src="directives/hoverButton.directive.js"></script>
 </body>
 
 </html>
